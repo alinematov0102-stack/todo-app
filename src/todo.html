@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="w-screen h-screen bg-[rgba(13,7,20,1)]">
+    <div class="flex justify-center items-center">
+      <div>
+        <div class="flex justify-center items-center mt-[64px] my-3 gap-4">
+          <input
+            id="taskInput"
+            class="w-[380px] h-[40px] border-[1px] border-[rgba(62,22,113,1)] rounded-[10px] text-amber-100 px-2.5"
+            type="text"
+            placeholder="Add a new task"
+            onkeydown="if (event.key === 'Enter') addTask();"
+          />
+
+          <button
+            id="addTask"
+            class="w-[40px] h-[38px] rounded-[10px] bg-[rgba(158,120,207,1)] text-center cursor-pointer"
+            onclick="addTask()"
+          >
+            +
+          </button>
+        </div>
+
+        <div id="todoSection" class="hidden">
+          <ul class="flex flex-col gap-5">
+            <h2 class="text-white">
+              Tasks to do - <span id="todoCount">0</span>
+            </h2>
+          </ul>
+          <div id="todoList" class="flex flex-col gap-5"></div>
+        </div>
+
+        <div id="doneSection" class="hidden mt-10">
+          <div class="my-5">
+            <ul class="flex flex-col gap-5">
+              <p class="text-white">Done - <span id="doneCount">0</span></p>
+            </ul>
+          </div>
+          <div id="doneList" class="flex flex-col gap-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="todo.js"></script>
+  </body>
+</html>
