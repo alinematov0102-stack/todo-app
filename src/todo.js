@@ -47,18 +47,18 @@ function render() {
   document.getElementById("doneList").innerHTML = dones
     .map(
       (t) => `
-     <div class="bg-gray-900 rounded-xl px-5 py-4 flex items-center justify-between border border-transparent hover:border-purple-500/20 transition-colors duration-200">
-            <p class="text-green-700 line-through">${escapeHtml(t.text)}</p>
-            <div class="flex items-center gap-4">
-            <button onclick="undoTask('${t.id})" class="cursor-pointer text-green-700  hover:text-green-900 hover:scale-110 transition-all duration-150 " title="Qaytarish">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" width="24" height="24" viewBox="0 0 16 16"><path fill="#00892e" fill-rule="evenodd" d="M7.32.029a8 8 0 0 1 7.18 3.307V1.75a.75.75 0 0 1 1.5 0V6h-4.25a.75.75 0 0 1 0-1.5h1.727A6.5 6.5 0 0 0 1.694 6.424A.75.75 0 1 1 .239 6.06A8 8 0 0 1 7.319.03Zm-3.4 14.852A8 8 0 0 0 15.76 9.94a.75.75 0 0 0-1.455-.364A6.5 6.5 0 0 1 2.523 11.5H4.25a.75.75 0 0 0 0-1.5H0v4.25a.75.75 0 0 0 1.5 0v-1.586a8 8 0 0 0 2.42 2.217" clip-rule="evenodd"/></svg>
+    <div class="bg-gray-900 rounded-xl px-5 py-4 flex items-center justify-between border border-transparent hover:border-purple-500/20 transition-colors duration-200">
+        <p class="text-green-700 line-through">${escapeHtml(t.text)}</p>
+        <div class="flex items-center gap-4">
+            <button onclick="undoTask('${t.id}')" class="cursor-pointer text-green-700 hover:text-green-900 hover:scale-110 transition-all duration-150" title="Qaytarish">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" width="24" height="24" viewBox="0 0 16 16"><path fill="#00892e" fill-rule="evenodd" d="M7.32.029a8 8 0 0 1 7.18 3.307V1.75a.75.75 0 0 1 1.5 0V6h-4.25a.75.75 0 0 1 0-1.5h1.727A6.5 6.5 0 0 0 1.694 6.424A.75.75 0 1 1 .239 6.06A8 8 0 0 1 7.319.03Zm-3.4 14.852A8 8 0 0 0 15.76 9.94a.75.75 0 0 0-1.455-.364A6.5 6.5 0 0 1 2.523 11.5H4.25a.75.75 0 0 0 0-1.5H0v4.25a.75.75 0 0 0 1.5 0v-1.586a8 8 0 0 0 2.42 2.217" clip-rule="evenodd"/></svg>
             </button>
-            <button onclick="deleteTask('${t.id})" class="cursor-pointer text-white/40 hover:text-red-400 hover:scale-110 transition-all duration-150" title="O'chirish">
-                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            <button onclick="deleteTask('${t.id}')" class="cursor-pointer text-white/40 hover:text-red-400 hover:scale-110 transition-all duration-150" title="O'chirish">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
             </button>
-            </div>
-      </div>
-    `,
+        </div>
+    </div>
+  `,
     )
     .join("");
 }
